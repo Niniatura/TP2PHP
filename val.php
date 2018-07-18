@@ -15,14 +15,11 @@
     // $pass = md5($pass);
 
     $quaryAdmin = $admin->quaryAdmin();
-    var_dump($quaryAdmin);
-    die();
-    // $r = mysqli_query($conexion, "select * from usuarios where username = '$user' and password = '$pass'");
-    $fetchFetch = mysqli_fetch_array($quaryAdmin); // hace que hace un query??
-
-    if ($fetchFetch)
+    $fetchFetch = mysqli_fetch_array($quaryAdmin); 
+    
+    if ($quaryAdmin)
     {
-      $_SESSION["id"] = $fetchFetch['id'];
+      $_SESSION["id"] = $quaryAdmin['id'];
       header("location: index.php");
     }
     else
