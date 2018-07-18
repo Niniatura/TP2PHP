@@ -3,7 +3,7 @@ include 'loginhead.php';
 ?>
       <div class="row">
         <div class="col-md-6 mx-auto">
-          <form method="POST" action="validador.php" class="form-signin">
+          <form method="POST" action="val.php" class="form-signin">
             <h2 class="form-signin-heading text-center">Inicia sesión</h2>
             <hr>
             <label for="inputUser" class="sr-only">Usuario</label>
