@@ -1,9 +1,5 @@
    <?php 
-   // require 'conexion.php';
-    spl_autoload_register(function ($nombre_clase)
-  {
-    include $nombre_clase . '.class.php';
-  });
+   require 'conexion.php';
     include 'BaseDato.class.php';
     include 'Admin.class.php';
 
@@ -13,13 +9,16 @@
     $user = $_POST['inputUser'];
     $pass = $_POST['inputPass'];
 
-    $admin = new Admin(); // se puede hace asi???
-    $admin->setPassword($newPassword);
+    $admin = new Admin($user,$pass); // se puede hace asi???
+    $admin->setPassword($pass);
 
     // $pass = md5($pass);
 
-    $r = mysqli_query($conexion, "select * from usuarios where username = '$user' and password = '$pass'");
-    $fetchFetch = mysqli_fetch_array($r); // hace que hace un query??
+    $quaryAdmin = $admin->quaryAdmin();
+    var_dump($quaryAdmin);
+    die();
+    // $r = mysqli_query($conexion, "select * from usuarios where username = '$user' and password = '$pass'");
+    $fetchFetch = mysqli_fetch_array($quaryAdmin); // hace que hace un query??
 
     if ($fetchFetch)
     {

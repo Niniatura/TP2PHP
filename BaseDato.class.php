@@ -11,7 +11,7 @@ class Connectdb{
         $this->pass = "";
         $this->db = "blog";
         
-        $conn = new mysqi($this->host, $this->user, $this->pass, $this->db);
+        $conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db);
 
         return $conn;
     }
