@@ -1,9 +1,10 @@
    <?php 
-    require 'conexion.php';
+   // require 'conexion.php';
     spl_autoload_register(function ($nombre_clase)
   {
     include $nombre_clase . '.class.php';
   });
+    include 'BaseDato.class.php';
     include 'Admin.class.php';
 
     session_start();

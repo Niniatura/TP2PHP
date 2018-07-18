@@ -1,7 +1,7 @@
 <?php
 require 'conexion.php';
-
-class Admin {
+// como uso el BaseDato clase??
+class Admin extends Connectdb {
 
 	public $id;
 	public $username = "";
@@ -16,5 +16,6 @@ class Admin {
 		$this->password = md5($newPassword);
 	}
 }
+
 
 ?>

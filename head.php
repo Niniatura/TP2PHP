@@ -1,8 +1,9 @@
 <?php
 //requiere la conexion a la base de datos
-require 'conexion.php'; 
+//require 'conexion.php';
+include 'BaseDato.class.php'; 
 //datos de la conexion
-$conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+// $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 session_start();
 
 
