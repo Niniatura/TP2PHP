@@ -19,7 +19,7 @@ class Admin extends Connectdb {
   public function quaryAdmin() {
    //Check if the username input is set.
      $conn = $this->connect();
-     $sql = "SELECT username, password FROM 'usuarios' WHERE .$this->'username',.$this->'password'";
+     $sql = "SELECT username, password FROM usuarios WHERE username= username and password= password";
      $results = mysqli_query($conn,$sql);
 
      if($results) {
