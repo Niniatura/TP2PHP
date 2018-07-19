@@ -1,6 +1,6 @@
 # TP2PHP
 LO QUE YA ESTA
- -Login ya esta
+- Login ya esta
 
 LO QUE FALTA
 - Posting (lado de admin)
