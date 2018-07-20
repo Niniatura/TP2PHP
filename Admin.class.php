@@ -22,6 +22,7 @@ class Admin extends Connectdb {
      $sql = "SELECT username, password FROM usuarios WHERE username= username and password= password";
      $results = mysqli_query($conn,$sql);
      return $results->fetch_array();
+     
      /*
      if($results) {
       //Query was successful

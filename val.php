@@ -3,7 +3,7 @@
     include 'BaseDato.class.php';
     include 'Admin.class.php';
 
-    session_start();
+    
 
 
     $user = $_POST['inputUser'];
@@ -19,7 +19,7 @@
     
     if ($quaryAdmin)
     {
-      $_SESSION["id"] = $quaryAdmin['id'];
+      $_SESSION['id'] = $quaryAdmin['id'];
       header("location: index.php");
     }
     else
@@ -27,4 +27,5 @@
       $_SESSION["msgError"] = "Ingresaste un usuario o contraseña erróneos.";
       header("location: login.php"); // no va a login
     }
+    
     ?>
