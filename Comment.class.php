@@ -34,7 +34,7 @@ class Comments extends Connectdb {
 	}
 	
 		
-
+	// MIRIAR listar() in php2018 github Usuarios
 
 	}
 
