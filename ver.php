@@ -1,8 +1,17 @@
 <?php 
 //requiere la conexion a la base de datos
 require 'conexion.php';
+include 'Posting.class.php';
+include 'BaseDato.class.php';
+
 //datos de la conexion
 $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+session_start();
+$posting = new Posting($id,$titulo,$contenido);
+$posting->editPost();
+
+
+
 
 // mostrar por id el post en una función personalizada dentro de una función de un while loop
 function show_all_post(){
