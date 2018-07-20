@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 20, 2018 at 04:14 AM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 7.2.2
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 20-07-2018 a las 21:39:27
+-- Versión del servidor: 10.1.29-MariaDB
+-- Versión de PHP: 7.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,51 +19,60 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `blog`
+-- Base de datos: `blog`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
+-- Estructura de tabla para la tabla `comments`
 --
 
 CREATE TABLE `comments` (
   `cid` int(11) NOT NULL,
   `uid` varchar(50) NOT NULL,
-  `date` datetime NOT NULL,
   `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `comments`
+-- Volcado de datos para la tabla `comments`
 --
 
-INSERT INTO `comments` (`cid`, `uid`, `date`, `message`) VALUES
-(1, 'unknown', '2018-07-24 06:34:16', 'comment 1'),
-(2, 'vicky', '2018-07-26 08:16:15', 'comment 2'),
-(3, 'alex', '2018-07-17 07:20:19', 'comment 3'),
-(4, 'gaby', '2018-07-28 07:13:12', 'comment 4');
+INSERT INTO `comments` (`cid`, `uid`, `message`) VALUES
+(1, 'unknown', 'comment 1'),
+(2, 'vicky', 'comment 2'),
+(3, 'alex', 'comment 3'),
+(4, 'gaby', 'comment 4'),
+(19, '', ''),
+(20, '', ''),
+(21, '', 'cnsdn'),
+(22, '', 'cnsdn'),
+(23, 'name', 'mndnd'),
+(24, 'ddsd', 'fdx'),
+(25, 'ddsd', 'dss'),
+(26, 'ddsd', 'dss'),
+(27, 'ddsd', 'dss'),
+(28, 'ddsd', 'dss');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `comments`
+-- Indices de la tabla `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`cid`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `comments`
+-- AUTO_INCREMENT de la tabla `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
