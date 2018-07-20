@@ -1,20 +1,26 @@
 <?php
 include 'head.php';
+
 ?>
     <h1>Bienvenido a mi blog!</h1>
     
-    <a href="new_post.php" class="btn btn-primary btn-add">Agregar post</a>
+    
 
       
       <?php 
       // no anda el logoout
-        if(isset($_SESSION['id'])){
-      ?>
-      <a class="btn btn-outline-danger" href="logout.php"><i class="far fa-times-circle"></i> Logout</a> 
-      <?php
-      } else {
+        if(!isset($_SESSION['id'])){
+
       ?>
       <a class="btn btn-outline-primary" href="login.php"><i class="fas fa-user"></i> Sign in</a>
+      <?php
+      } else {
+        //echo "error en el logueo";
+      ?>
+      <a href="new_post.php" class="btn btn-primary btn-add">Agregar post</a>
+      <a class="btn btn-outline-danger" href="logout.php"><i class="far fa-times-circle"></i> Logout</a> 
+      
+
       <?php
       }
     ?>
