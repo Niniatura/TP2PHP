@@ -1,6 +1,7 @@
 <?php 
 require_once 'conexion.php';
-include 'BaseDato.class.php'; 
+include 'BaseDato.class.php';
+include 'Comment.class.php'; 
 //datos de la conexion
  $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
@@ -47,18 +48,17 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
             ?>  
             <br>
               <h4>Tener algo que decir...</h4>
-
-              <?php
-               echo "<form>
+            
+             <form method='POST' action='comments.php'>
               <div class='form-group'>
-               <input type='hidden' class='form-control' name='uid' value='unknown'>
-               <input type='hidden' class='form-control' name='date' value='".date('Y-m-d H:i:s')."'>
+               <input type='hidden' class='form-control' name='uid'>
+               <input type='hidden' class='form-control' name='date'>
               <textarea class='form-control' id='message' name='message' rows='3'></textarea>
              </div>
-             <button class='btn btn-lg btn-primary text-white btn-block mt-4 type='submit' name='submit'>Envíanos tus comentarios</button>
+             <button class='btn btn-lg btn-primary text-white btn-block mt-4 type='submit' name='commentSubmit'>Envíanos tus comentarios</button>
 
-        </form>";
-        ?> 
+        </form>
+        
 
              </div>
         
