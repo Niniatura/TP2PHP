@@ -51,8 +51,7 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
             
              <form method='POST' action='comments.php'>
               <div class='form-group'>
-               <input type='hidden' class='form-control' name='uid'>
-               <input type='hidden' class='form-control' name='date'>
+               <input type='text' class='form-control' name='uid' placeholder="tu nombre">
               <textarea class='form-control' id='message' name='message' rows='3'></textarea>
              </div>
              <button class='btn btn-lg btn-primary text-white btn-block mt-4 type='submit' name='commentSubmit'>Envíanos tus comentarios</button>
