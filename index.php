@@ -1,5 +1,6 @@
 <?php
 include 'head.php';
+
 ?>
     <h1>Bienvenido a mi blog!</h1>
     
@@ -8,7 +9,7 @@ include 'head.php';
       
       <?php 
       // no anda el logoout
-        if(isset($_SESSION['id'])){
+        if(!isset($_SESSION['id'])){
 
       ?>
       <a class="btn btn-outline-primary" href="login.php"><i class="fas fa-user"></i> Sign in</a>
