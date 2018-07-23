@@ -26,8 +26,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
 
-    <title>Hello, world!</title>
+    <title>Commentarios</title>
   </head>
   <body class="bg-light">
 
@@ -36,17 +38,13 @@
         <div class="lh-100">
           <h6 class="mb-0 text-black lh-100">Comentarios</h6>
           <small>TP Blog 2018</small>
-        </div>
-      </div>
-    
-        <small class="d-block text-right mt-3">
-          <a href="index.php">Home</a>
+            <small class="d-block text-right mt-3">
+          <a href="index.php" class="colorlink"><i class="fas fa-home colorlink"></i> Home</a>
         </small>
-       
-      
-  </main>
 
-    <?php
+        </div>
+
+        <?php
          $setComments = new Comments($uid,$message); 
         $setComments->setComments();
 
@@ -55,6 +53,13 @@
         $getComments->getComments();
 
     ?>
+      </div>
+    
+             
+      
+  </main>
+
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
