@@ -27,10 +27,11 @@ class Comments extends Connectdb {
 	$sql = "SELECT * FROM comments";
 	$results = $conn->query($sql);
 	while ($row = $results->fetch_assoc()) {
-		echo "<div>";
-			echo $row['uid']."<br>";
+		echo "<div class='container media text-muted pt-3 my-3 p-3 bg-white rounded box-shadow'>";
+		echo "<p class='media-body pb-3 mb-0 small lh-125 border-bottom border-gray'>";
+			echo "<strong class='d-block text-gray-dark'>".$row['uid']."</strong><br>";
 			echo $row['message'];
-		echo "</div>";
+		echo "</p></div>";
 	}
 	
 		
