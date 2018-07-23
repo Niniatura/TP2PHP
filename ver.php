@@ -1,8 +1,9 @@
 <?php 
-//requiere la conexion a la base de datos
-require 'conexion.php';
+require_once 'conexion.php';
+include 'BaseDato.class.php';
+include 'Comment.class.php'; 
 //datos de la conexion
-$conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+ $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 // mostrar por id el post en una función personalizada dentro de una función de un while loop
 function show_all_post(){
@@ -19,6 +20,7 @@ function show_all_post(){
 
 }
 
+date_default_timezone_set('America/Argentina/Buenos_Aires');
 
 
 
@@ -43,18 +45,23 @@ function show_all_post(){
             // llamada a la funcion para mostrar el post completo
             show_all_post() 
 
-            ?>
-        
-               
-                 
+            ?>  
+            <br>
+              <h4>Tener algo que decir...</h4>
+            
+             <form method='POST' action='comments.php'>
+              <div class='form-group'>
+               <input type='text' class='form-control' name='uid' placeholder="tu nombre">
+              <textarea class='form-control' id='message' name='message' rows='3'></textarea>
              </div>
+             <button class='btn btn-lg btn-primary text-white btn-block mt-4 type='submit' name='commentSubmit'>Envíanos tus comentarios</button>
+
+        </form>
+        
+
+             </div>
+        
 
 
-
-
-
-
-
-        </div>
     </body>
 </html>
