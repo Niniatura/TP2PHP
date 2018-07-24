@@ -1,7 +1,7 @@
 <?php 
 
-require_once 'conexion.php';
-class Posting extends Connectdb {
+include_once 'conexion.php';
+class Posting extends Connectdb{
 public $id;
 public $titulo;
 public $contenido;
@@ -17,7 +17,7 @@ public function editPost(){
 	$sql= "UPDATE blogtp_1 SET titulo_del_post ='$this->titulo' and contenido ='$this->contenido' WHERE id='$this->id'";
 
 	$results2 =mysqli_query($conn,$sql);
-	return $results;
+	return $results2;
 
 }
 }
