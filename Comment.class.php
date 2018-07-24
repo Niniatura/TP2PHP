@@ -16,7 +16,6 @@ class Comments extends Connectdb {
      $sql = "INSERT INTO comments (uid, message) 
      		 VALUES ('$this->uid', '$this->message')";
      $results = $conn->query($sql);
-     //$results = mysqli_query($conn,$sql);
      return $results;
 		
 
@@ -33,11 +32,10 @@ class Comments extends Connectdb {
 			echo $row['message'];
 		echo "</p></div>";
 	}
-	
-		
-	// MIRIAR listar() in php2018 github Usuarios
 
 	}
+
+	
 
 }
 
