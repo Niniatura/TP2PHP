@@ -1,7 +1,9 @@
 <?php 
 
-include_once 'conexion.php';
-class Posting extends Connectdb{
+require_once 'conexion.php';
+require_once 'BaseDato.class.php';
+require_once 'Admin.class.php';
+class Posting extends Connectdb {
 public $id;
 public $titulo;
 public $contenido;
