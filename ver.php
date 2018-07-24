@@ -1,8 +1,10 @@
 <?php 
 //requiere la conexion a la base de datos
 require 'conexion.php';
-include 'Posting.class.php';
-include 'BaseDato.class.php';
+require_once 'Posting.class.php';
+include_once 'BaseDato.class.php';
+include_once 'Admin.class.php';
+
 
 //datos de la conexion
 $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
