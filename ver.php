@@ -17,8 +17,6 @@ $posting = new Posting($id,$titulo,$contenido);
 $posting->editPost();
 
 
-
-
 // mostrar por id el post en una función personalizada dentro de una función de un while loop
 function show_all_post(){
     global $conexion;
@@ -60,8 +58,10 @@ function show_all_post(){
 
             ?>
         
-            <button>editar</button>
-   
+            <form action="update_post.php" method="get">
+            <input type="submit" name="update_post" value="editar" />
+            <input type="submit" name="delete_post" value="borrar" />
+            </form>
                  
 
              </div>
