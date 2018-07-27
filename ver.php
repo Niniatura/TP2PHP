@@ -10,8 +10,8 @@ include_once 'Admin.class.php';
 $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 session_start();
 $id=$_GET['id'];
-$titulo=NULL;
-$contenido=NULL;
+$titulo="";
+$contenido="";
 
 $posting = new Posting($id,$titulo,$contenido);
 $posting->editPost();
