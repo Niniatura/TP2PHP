@@ -22,23 +22,12 @@ public function __construct($id,$titulo,$contenido){
 	return $results2;
 } */
 
-public function editPost() {
+public function editPost($id,$titulo,$contenido) {
 	$conn = $this->connect();
-	$sql = "SELECT * FROM blogtp_1";
+	$sql = "UPDATE blogtp_1 set '$this->titulo', '$this->contenido' where '$this->id'";
 	$results = $conn->query($sql);
-	while ($row = $results->fetch_assoc()) {
-		echo "<div>";
-			echo $row['id']."<br>";
-			echo $row['titulo_del_post'];
-			echo $row['contenido_del_post'];
-		echo "<form action='update_post.php' method='POST'>
-            <input type='hidden' name='id' value='".$row['id']."'/>
-            <input type='hidden' name='titulo' value='".$row['titulo_del_post']."'/>
-            <input type='hidden' name='contenido' value='".$row['contenido_del_post']."'/>
-             <button>Editar</button>
-             </form>";
-		echo "</div>";
-	}
+	return $results;
+	
 }
 
 
