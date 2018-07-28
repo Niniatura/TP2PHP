@@ -9,13 +9,10 @@ include_once 'Admin.class.php';
 //datos de la conexion
 $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 session_start();
-$id=$_GET['id'];
+
+$id="";
 $titulo="";
 $contenido="";
-
-$posting = new Posting($id,$titulo,$contenido);
-$posting->editPost();
-
 
 // mostrar por id el post en una función personalizada dentro de una función de un while loop
 function show_all_post(){
@@ -31,11 +28,6 @@ function show_all_post(){
     }
 
 }
-
-
-
-
-
 
  ?>
 <!DOCTYPE html>
@@ -57,13 +49,17 @@ function show_all_post(){
             show_all_post() 
 
             ?>
-        
-            <form action="update_post.php" method="get">
-            <input type="submit" name="update_post" value="editar" />
-             </form>
-            <form action="delete_post.php" method="get">
+            
+            <form action="update_post.php" method="post">
+            <input type="submit" name="delete_post" value="editar" />
+            </form>             
+            
+            
+            
+
+            <!---<form action="delete_post.php" method="get">
             <input type="submit" name="delete_post" value="borrar" />
-            </form>
+            </form> -->
                  
 
              </div>
