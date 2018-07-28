@@ -49,7 +49,7 @@ function show_all_post(){
             show_all_post() 
 
             ?>
-            <form action="editar.php">
+            <form action="editardelete.php">
             <button name="">editar</button>
              <button name="">borrar</button >          
             </form>
