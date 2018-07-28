@@ -60,6 +60,8 @@ function show_all_post(){
         
             <form action="update_post.php" method="get">
             <input type="submit" name="update_post" value="editar" />
+             </form>
+            <form action="delete_post.php" method="get">
             <input type="submit" name="delete_post" value="borrar" />
             </form>
                  
