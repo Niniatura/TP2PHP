@@ -7,10 +7,10 @@ include 'Posting.class.php';
  $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 session_start();
 
-$titulo = $_POST['titulo'];
-$contenido = $_POST['contenido'];
+$titulo = $_POST['titulo_del_post'];
+$contenido = $_POST['contenido_del_post'];
 
-$editar= new Posting($id,$titulo,$contenido);
+$editar= new Posting($titulo,$contenido);
 
 var_dump($editar);
 die();
