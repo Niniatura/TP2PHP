@@ -29,6 +29,7 @@ public function editPost($id,$titulo,$contenido) {
 	return $results;
 	
 }
+//*helo
 
 
 }
