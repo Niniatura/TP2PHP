@@ -40,6 +40,7 @@ public function editPost() {
 		echo "</div>";
 	}
 }
+//*helo
 
 
 }
