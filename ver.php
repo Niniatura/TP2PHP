@@ -49,11 +49,10 @@ function show_all_post(){
             show_all_post() 
 
             ?>
-            
-            <form action="update_post.php" method="get">
-            <input type="submit" name="edit_post" value="editar" />
-            </form>             
-            
+            <form action="editardelete.php">
+            <button name="">editar</button>
+             <button name="">borrar</button           
+            </form>
             
             
 
