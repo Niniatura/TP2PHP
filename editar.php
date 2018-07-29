@@ -7,8 +7,7 @@ include 'Posting.class.php';
 
 session_start();
 
-//$titulo = $_POST['titulo_del_post'];
-//$contenido = $_POST['contenido_del_post'];
+
     $titulo = isset($_POST['titulo_del_post']); 
     $contenido= isset ($_POST['contenido_del_post']);
 
