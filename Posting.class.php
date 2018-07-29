@@ -34,6 +34,7 @@ class Posting extends Connectdb {
 		return $rows;
 	}
 		
+	
 	public function execute($query) 
 	{
 		$result = $this->conn->query($query);
@@ -45,6 +46,7 @@ class Posting extends Connectdb {
 			return true;
 		}		
 	}
+	
 	
 	public function delete($id, $table) 
 	{ 

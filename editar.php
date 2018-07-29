@@ -12,8 +12,6 @@ $contenido = $_POST['contenido_del_post'];
 
 $editar= new Posting($titulo,$contenido);
 
-var_dump($editar);
-die();
 //getting id from url
 $id = $editar->escape_string($_GET['id']);
 //selecting data associated with this particular id
