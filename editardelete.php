@@ -11,10 +11,10 @@ $contenido=@$_POST['contenido_del_post'];
 
 
     $setPosting = new Posting($titulo,$contenido);
-    $setPosting->setPost();
+    $setPosting->showPosts();
     //fetching data in descending order (lastest entry first)
     $getPosting=new Posting($titulo,$contenido);
-    $getPosting->showPosts();
+    $getPosting->setPost();
     
 
 

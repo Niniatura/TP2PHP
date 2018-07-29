@@ -19,7 +19,7 @@ class Posting extends Connectdb {
     public function setPost() {
      $conn = $this->connect();
      $sql = "UPDATE blogtp_1  SET titulo_del_post, contenido_del_post
-             WHERE titulo_del_post ='$this->titulo_del_post'and contenido_del_post= '$this->contenido_del_post'";
+             WHERE titulo_del_post ='$this->titulo'and contenido_del_post= '$this->contenido'";
      $results = $conn->query($sql);
      //$results = mysqli_query($conn,$sql);
      return $results;
@@ -27,7 +27,7 @@ class Posting extends Connectdb {
     
     public function showPosts(){
           $conn = $this->connect();
-          $sql = "SELECT * FROM blogtp_1";
+          $sql = "SELECT titulo_del_post, contenido_del_post FROM blogtp_1 WHERE titulo_del_post ='$this->titulo'and contenido_del_post= '$this->contenido'";
 
           $results = $conn->query($sql); 
           while ($row = $results->fetch_assoc()){
