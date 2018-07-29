@@ -15,6 +15,87 @@ class Posting extends Connectdb {
         $this->contenido_del_post = $contenido;
     }
 
+<<<<<<< HEAD
+=======
+	
+	public function getData($query)
+	{		
+		$result = $this->conn->query($query);
+		
+		if ($result == false) {
+			return false;
+		} 
+		
+		$rows = array();
+		
+		while ($row = $result->fetch_assoc()) {
+			$rows[] = $row;
+		}
+		
+		return $rows;
+	}
+		
+	
+	public function execute($query) 
+	{
+		$result = $this->conn->query($query);
+		
+		if ($result == false) {
+			echo 'Error: cannot execute the command';
+			return false;
+		} else {
+			return true;
+		}		
+	}
+	
+	
+	public function delete($id, $table) 
+	{ 
+		$query = "DELETE FROM blogtp_1 WHERE id = $id";
+		
+		$result = $this->conn->query($query);
+	
+		if ($result == false) {
+			echo 'Error: cannot delete id ' . $id . ' from table ' . $table;
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
+	/*public function escape_string($value)
+	{
+		return $this->conn->real_escape_string($value);
+	} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* viejo
+public $id;
+public $titulo;
+public $contenido;
+
+public function __construct($id,$titulo,$contenido){
+	$this->id = $id;
+	$this->titulo = $titulo;
+	$this->contenido = $contenido;
+}
+=======
+    public function getData($query)
+    {       
+        $result = $this->conn->query($query);
+>>>>>>> 4c166659c5c2cf5c721fafd81769c4e95c878217
+>>>>>>> c3ffe823193361c48bc2feaa1878d077a2537469
 
     public function setPost() {
      $conn = $this->connect();
