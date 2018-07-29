@@ -51,6 +51,10 @@ function show_all_post(){
             ?>
             <form action="editardelete.php" method="post">
             <input type="submit" name="titulo_del_post" value="edit">
+            <input type="text">
+             <input type="submit" name="contenido_del_post" value="edit">
+            <input type="text">
+
              <button name="">borrar</button >          
             </form>
             
