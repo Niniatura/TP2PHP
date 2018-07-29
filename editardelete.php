@@ -1,4 +1,5 @@
 <?php
+
 // including the database connection file
 require_once 'conexion.php';
 include 'BaseDato.class.php';
@@ -14,6 +15,27 @@ $posting = new Posting($titulo,$contenido);
 $query = "SELECT * FROM blogtp_1 ORDER BY id DESC";
 $result = $posting->getData($query);
 //echo '<pre>'; print_r($result); exit;
+
+include 'BaseDato.class.php';
+include 'Posting.class.php'; 
+include_once 'Admin.class.php';
+session_start();
+
+
+
+$titulo =@$_POST['titulo_del_post'];
+$contenido=@$_POST['contenido_del_post'];
+
+
+    $setPosting = new Posting($titulo,$contenido);
+    $setPosting->showPosts();
+    //fetching data in descending order (lastest entry first)
+    $getPosting=new Posting($titulo,$contenido);
+    $getPosting->setPost();
+    
+
+
+
 ?>
 
 <html>
@@ -22,6 +44,7 @@ $result = $posting->getData($query);
 </head>
 
 <body>
+
 
 	<table width='80%' border=0>
 
@@ -42,5 +65,19 @@ $result = $posting->getData($query);
 	}
 	?>
 	</table>
+
+    <table width='80%' border=0>
+
+    <tr bgcolor='#CCCCCC'>
+        <td>titulo</td>
+        <td>contenido</td>
+
+    </tr>
+    <td>
+    
+
+    </td>
+    </table>
+
 </body>
 </html>
