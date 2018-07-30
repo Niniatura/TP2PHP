@@ -24,6 +24,9 @@ function show_all_post(){
         echo '<img class="card-img-top" src="imagen/' . $mostrar_post["imagen_upload"] . '"/>';
         echo '<h1>'.$mostrar_post["titulo_del_post"].'</h1>';
         echo '<div class="contenido_post">'.$mostrar_post["contenido_del_post"].'</div>';
+        echo '<a href="editar.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Editar</a>';
+        echo '<a href="delete.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Borrar</a>';
+
 
     }
 
@@ -49,21 +52,12 @@ function show_all_post(){
             show_all_post();
             
             ?>
-            <form action="editardelete.php" method="post">
-                <input type="submit" name="titulo_del_post" value="edit">
-                
-                <input type="submit" name="contenido_del_post" value="edit">
+            
+            
+          
             
 
-             <button name="">borrar</button >          
-            </form>
-            
-            
-
-            <!---<form action="delete_post.php" method="get">
-            <input type="submit" name="delete_post" value="borrar" />
-            </form> -->
-                 
+           
 
 </div>
             

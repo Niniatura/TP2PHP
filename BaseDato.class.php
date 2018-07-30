@@ -7,7 +7,7 @@ class Connectdb{
     protected function connect(){
         $this->host = "localhost";
         $this->user = "root";
-        $this->pass = "persepolis";
+        $this->pass = "";
         $this->db = "blog";
         
         $conn = mysqli_connect($this->host, $this->user, $this->pass, $this->db);
