@@ -46,14 +46,14 @@ function show_all_post(){
 
             <?php 
             // llamada a la funcion para mostrar el post completo
-            show_all_post() 
-
+            show_all_post();
+            
             ?>
             <form action="editardelete.php" method="post">
-            <input type="submit" name="titulo_del_post" value="edit">
-            <input type="text">
-             <input type="submit" name="contenido_del_post" value="edit">
-            <input type="text">
+                <input type="submit" name="titulo_del_post" value="edit">
+                
+                <input type="submit" name="contenido_del_post" value="edit">
+            
 
              <button name="">borrar</button >          
             </form>
@@ -64,6 +64,10 @@ function show_all_post(){
             <input type="submit" name="delete_post" value="borrar" />
             </form> -->
                  
+
+</div>
+            
+            
 
              </div>
 
