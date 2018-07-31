@@ -9,16 +9,14 @@ session_start();
 
 
 if (isset($_POST['delete'])) {
-	
-	$titulo =@$_POST['titulo_del_post'];
-$contenido=@$_POST['contenido_del_post'];
+
+$borrarPosts= new Posting();
 $id=@$_GET['id'];
-$borrarPosts=new Posting($titulo,$contenido,$id);
-$borrarPosts->borrarPosts();
 
+$result = $borrarPosts->borrarPosts($id, 'blogtp_1');
+
+if ($result) {
+	//redirecting to the display page (index.php in our case)
+	header("Location:index.php");
 }
-
-
-
-
- ?>
+?>

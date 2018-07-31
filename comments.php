@@ -9,7 +9,7 @@
 
     $uid = $_POST['uid'];
     $message = $_POST['message'];
-    //$getmessage = $row['message'];
+    
 
     $setComments = new Comments($uid,$message); 
     $setComments->setComments();
