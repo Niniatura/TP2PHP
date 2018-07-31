@@ -31,10 +31,7 @@ $id=@$_GET['id'];
     $mostrar_post=mysqli_fetch_array($result2);
     
 
-//echo '<textarea name="contenido_del_post">'.$mostrar_post['titulo_del_post'].'</textarea>';
-//}
-//}
-//}
+
 
 ?>
 
