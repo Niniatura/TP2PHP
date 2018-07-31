@@ -23,8 +23,6 @@ class Admin extends Connectdb {
 
      $results = mysqli_query($conn,$sql);
      return $results->fetch_array();
-     
-  
    
   }
 }

@@ -11,3 +11,6 @@ LO QUE FALTA
       - Borrar
 - Cambiar el funcion showpost(); de lado publico a POO 
       - Cambiar el code viejo a POO 
+
+
+testing

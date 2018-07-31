@@ -30,3 +30,7 @@ body {
 .card-body {
     padding-bottom: 50px;
 }
+
+.colorlink {
+    color: white;
+}
