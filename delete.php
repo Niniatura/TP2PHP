@@ -35,7 +35,7 @@ $id=@$_GET['id'];
 
 <div class="container">
   <h2>Borrar La Publicación Aqui</h2>
-  <form action="editardos.php?id=<?php echo $id ?>" method="post">
+  <form action="deletedos.php?id=<?php echo $id ?>" method="post">
  
   <div class="form-group">
       
