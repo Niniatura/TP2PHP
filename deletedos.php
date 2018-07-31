@@ -13,7 +13,7 @@ if (isset($_POST['delete'])) {
 $borrarPosts= new Posting();
 $id=@$_GET['id'];
 
-$result = $borrarPosts->borrarPosts($id, 'blogtp_1');
+$result = $borrarPosts->borrarPosts($id);
 
 if ($result) {
 	//redirecting to the display page (index.php in our case)

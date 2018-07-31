@@ -24,14 +24,7 @@ class Admin extends Connectdb {
      $results = mysqli_query($conn,$sql);
      return $results->fetch_array();
      
-     /*
-     if($results) {
-      //Query was successful
-      echo "Success";
-     } else {
-      echo mysql_error();
-     }
-     */
+  
    
   }
 }

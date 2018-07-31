@@ -34,10 +34,9 @@ class Posting extends Connectdb {
           return $results;
         }
     
-    public function borrarPosts(){
+    public function borrarPosts($id, $table){
      $conn = $this->connect();
-     $sql = "DELETE blogtp_1  SET titulo_del_post='$this->titulo', contenido_del_post='$this->contenido'
-            WHERE id = '$this->id'";
+     $sql = "DELETE FROM blogtp_1 WHERE id = '$this->id'";
      $results = $conn->query($sql);
      return $results; 
     }
