@@ -34,10 +34,13 @@ class Posting extends Connectdb {
           return $results;
         }
     
-    /*public function escape_string($value)
-    {
-        return $this->conn->real_escape_string($value);
-    } */
+    public function borrarPosts(){
+     $conn = $this->connect();
+     $sql = "DELETE blogtp_1  SET titulo_del_post='$this->titulo', contenido_del_post='$this->contenido'
+            WHERE id = '$this->id'";
+     $results = $conn->query($sql);
+     return $results; 
+    }
 }
 
 ?>
