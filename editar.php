@@ -18,8 +18,7 @@ $id=@$_GET['id'];
     //
 //$setPosting->showPosts();
     //fetching data in descending order (lastest entry first)
-    //$getPosting=new Posting($titulo,$contenido,$id);
-    //$getPosting->setPost();
+    
 
 
 //function updatePost(){    

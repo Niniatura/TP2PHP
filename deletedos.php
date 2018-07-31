@@ -7,17 +7,20 @@ include_once 'Posting.class.php';
 include_once 'Admin.class.php';
 session_start();
 
+
+$delete=@$_POST['delete'];
+
+if (isset($_POST['delete'])) {
 $titulo =@$_POST['titulo_del_post'];
 $contenido=@$_POST['contenido_del_post'];
 $id=@$_GET['id'];
+/*$borrarPosts= new Posting($id,$titulo,$contenido);
 
-if (isset($_POST['delete'])) {
+$result = $borrarPosts->borrarPosts($id, $titulo, $contenido);*/
+$getPosting2=new Posting($titulo,$contenido,$id);
+$getPosting2->borrarPosts();
 
-$borrarPosts= new Posting();
-
-$result = $borrarPosts->borrarPosts($id, $titulo, $contenido);
-
-if ($result) {
+if ($getPosting2) {
 	// redirigiendo a la página de visualización (index.php en nuestro caso)
 	header("Location:index.php");
 }
