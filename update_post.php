@@ -17,17 +17,6 @@ if (isset($_GET['edit_post']))
 	$result = mysqli_query($conexion, $sql)or die(mysql_error());
 
 }
-    
-           
-
-            
-
-
-
-
-
-
-
 
 ?>
 <html>
@@ -35,9 +24,6 @@ if (isset($_GET['edit_post']))
 
 </head>
 <body>
-
-
-
 
  <div id="content">
     <form method="post">
@@ -54,8 +40,6 @@ if (isset($_GET['edit_post']))
     </table>
     </form>
     </div>
-
-
 
 </body>
 </html>

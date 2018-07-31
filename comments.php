@@ -6,24 +6,9 @@
 
     session_start();
 
-
+    // los datos del formulario en ver.php
     $uid = $_POST['uid'];
     $message = $_POST['message'];
-
-    $setComments = new Comments($uid,$message); 
-    $setComments->setComments();
-
-
-    $getComments = new Comments($uid,$message); 
-    $getComments->getComments();
-
-    
-
-
-
-    //$getmessage = $row['message'];
-
-   
 
     
 
@@ -57,10 +42,11 @@
         </div>
 
         <?php
+        // insertar los commentarios en base de dato de comment.sql
          $setComments = new Comments($uid,$message); 
         $setComments->setComments();
 
-
+         // mostrar todo los datos en base de dato de comments.sql
         $getComments = new Comments($uid,$message); 
         $getComments->getComments();
 

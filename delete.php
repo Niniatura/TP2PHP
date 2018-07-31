@@ -1,5 +1,5 @@
 <?php
-// including the database connection file
+// incluyendo el archivo de conexión de la base de datos
 require_once 'conexion.php';
 include 'BaseDato.class.php';
 include 'Posting.class.php'; 

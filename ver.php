@@ -52,34 +52,10 @@ function show_all_post(){
 
             <?php 
             // llamada a la funcion para mostrar el post completo
-
-            show_all_post();
-            
-            ?>
-            
-            
-          
-            
-
-           
-
-</div>
-            
-            
-
-             </div>
-
-
-            
-
-
-
-        </div>
-
             show_all_post() 
-
             ?>  
             <br>
+            <!-- Form para Commenarios-->
               <h4>Tener algo que decir...</h4>
             
              <form method='POST' action='comments.php'>
@@ -94,7 +70,6 @@ function show_all_post(){
 
              </div>
         
-
 
 
     </body>

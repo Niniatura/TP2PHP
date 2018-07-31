@@ -8,7 +8,7 @@ include 'head.php';
 
       
       <?php 
-      // no anda el logoout
+      // si esta logeando, mostra el resto del texto para el admin 
         if(!isset($_SESSION['id'])){
 
       ?>

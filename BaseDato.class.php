@@ -4,6 +4,8 @@ class Connectdb{
     private $user;
     private $pass;
     private $db;
+
+    // La función conectar se conecta a la base de datos
     protected function connect(){
         $this->host = "localhost";
         $this->user = "root";
