@@ -38,14 +38,14 @@ $id=@$_GET['id'];
 <div class="container">
   <h2>Borrar La Publicación Aqui</h2>
  
-
+  <hr>
 <form action="deletedos.php?id=<?php echo $id ?>" method="post">
  
   <div class="form-group">
       
-      <textarea class="form-control" rows="3" name="titulo_del_post"> <?php echo $mostrar_post['titulo_del_post']?></textarea>
+      <h3> Titulo: <?php echo $mostrar_post['titulo_del_post']?></h3>
       <br>
-      <textarea class="form-control" rows="3"  name="contenido_del_post"><?php echo $mostrar_post['contenido_del_post']?></textarea>
+      <p> Contenido: <?php echo $mostrar_post['contenido_del_post']?></p>
       <br>
        <button type="submit" name="delete" class="btn btn-primary">Borrar</button>
   </div>
