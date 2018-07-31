@@ -14,11 +14,6 @@ $id="";
 $titulo="";
 $contenido="";
 
-require_once 'conexion.php';
-include 'BaseDato.class.php';
-include 'Comment.class.php'; 
-//datos de la conexion
- $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 
 // mostrar por id el post en una función personalizada dentro de una función de un while loop
