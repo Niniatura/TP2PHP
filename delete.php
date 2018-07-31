@@ -11,11 +11,13 @@ session_start();
 
 $id=@$_GET['id'];
    
-    $id = @$_GET['id'];
+    
+     $id = @$_GET['id'];
     $sql = "SELECT * FROM blogtp_1 where id=$id";
     $result2 = mysqli_query($conexion, $sql);
     $mostrar_post=mysqli_fetch_array($result2);
     
+
 
 ?>
 
@@ -35,7 +37,9 @@ $id=@$_GET['id'];
 
 <div class="container">
   <h2>Borrar La Publicación Aqui</h2>
-  <form action="deletedos.php?id=<?php echo $id ?>" method="post">
+ 
+
+<form action="deletedos.php?id=<?php echo $id ?>" method="post">
  
   <div class="form-group">
       
@@ -47,6 +51,7 @@ $id=@$_GET['id'];
   </div>
 </form>
 </div>
+-->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

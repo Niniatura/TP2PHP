@@ -21,19 +21,18 @@ class Posting extends Connectdb {
  }
     
     
-    public function showPosts(){
+    public function showPosts($titulo, $contenido, $id){
           $conn = $this->connect();
-          $sql = "SELECT titulo_del_post, contenido_del_post FROM blogtp_1 WHERE id = '$this->id'";
+          $sql = "SELECT * FROM blogtp_1 WHERE id = '$this->id'";
           $results = $conn->query($sql); 
-          while ($row = $results->fetch_assoc()) {
-            $id = $row['id'];
-            $titulo = $row['titulo'];
-            $coniendo = $row['contenido'];
-            
+          /*while ($row = $results->fetch_assoc()){
+            echo "<div>";
+            echo "<textarea>".$row['titulo_del_post']."</textarea><br>";
+            echo "<textarea>".$row['contenido_del_post']."</textarea><br>";
+            echo "</div>";
+          }*/ 
+          return $results;
         }
-
-        return $results;
-    }
     
     public function borrarPosts($id){
      $conn = $this->connect();

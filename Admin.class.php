@@ -1,4 +1,6 @@
 <?php
+// La clase Admin construye un nuevo admin que esta extendo con BaseDato.class.php 
+
 require_once 'conexion.php';
 class Admin extends Connectdb {
 
