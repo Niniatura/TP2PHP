@@ -26,8 +26,8 @@ function show_all_post(){
         echo '<img class="card-img-top" src="imagen/' . $mostrar_post["imagen_upload"] . '"/>';
         echo '<h1>'.$mostrar_post["titulo_del_post"].'</h1>';
         echo '<div class="contenido_post">'.$mostrar_post["contenido_del_post"].'</div>';
-        echo '<a href="editar.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Editar</a>';
-        echo '<a href="delete.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Borrar</a>';
+        echo ' <a href="editar.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Editar</a>';
+        echo ' <a href="delete.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Borrar</a>';
 
 
     }
