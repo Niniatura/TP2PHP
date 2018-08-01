@@ -23,6 +23,7 @@ include 'loginhead.php';
         <div class="col-lg-8">
           <p class="text-center">
              <?php
+             // mensaje de error si el administrador ingresa el nombre incorrecto + contraseña 
               session_start();
               if (isset($_SESSION['msgError']))
               {

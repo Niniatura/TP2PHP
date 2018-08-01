@@ -1,9 +1,20 @@
 <?php 
-require_once 'conexion.php';
-include 'BaseDato.class.php';
-include 'Comment.class.php'; 
+//requiere la conexion a la base de datos
+require 'conexion.php';
+require_once 'Posting.class.php';
+include_once 'BaseDato.class.php';
+include_once 'Admin.class.php';
+
+
 //datos de la conexion
- $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+session_start();
+
+$id="";
+$titulo="";
+$contenido="";
+
+
 
 // mostrar por id el post en una función personalizada dentro de una función de un while loop
 function show_all_post(){
@@ -15,15 +26,13 @@ function show_all_post(){
         echo '<img class="card-img-top" src="imagen/' . $mostrar_post["imagen_upload"] . '"/>';
         echo '<h1>'.$mostrar_post["titulo_del_post"].'</h1>';
         echo '<div class="contenido_post">'.$mostrar_post["contenido_del_post"].'</div>';
+        echo ' <a href="editar.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Editar</a>';
+        echo ' <a href="delete.php?id=' . $mostrar_post["id"] . '" class="btn btn-primary">Borrar</a>';
+
 
     }
 
 }
-
-date_default_timezone_set('America/Argentina/Buenos_Aires');
-
-
-
 
 
  ?>
@@ -44,9 +53,9 @@ date_default_timezone_set('America/Argentina/Buenos_Aires');
             <?php 
             // llamada a la funcion para mostrar el post completo
             show_all_post() 
-
             ?>  
             <br>
+            <!-- Form para Commenarios-->
               <h4>Tener algo que decir...</h4>
             
              <form method='POST' action='comments.php'>

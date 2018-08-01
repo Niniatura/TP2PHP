@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+//La clase Comment construye un nuevo commentario que esta extendido a BaseDato.class.php 
 require_once 'conexion.php';
 
 class Comments extends Connectdb {
@@ -10,17 +12,18 @@ class Comments extends Connectdb {
 		$this->uid = $uid;
 		$this->message = $message;
 	}
-
+// La función insertar nuevos datos en la base de datos de comment.sql
 	public function setComments() {
 	 $conn = $this->connect();
      $sql = "INSERT INTO comments (uid, message) 
      		 VALUES ('$this->uid', '$this->message')";
      $results = $conn->query($sql);
+
      return $results;
 		
 
 	}
-
+// La función mostrar todo los datos por id en la base de datos de comment.sql
 	public function getComments() {
 	$conn = $this->connect();
 	$sql = "SELECT * FROM comments ORDER by cid DESC";
@@ -35,9 +38,7 @@ class Comments extends Connectdb {
 
 	}
 
-	
-
-}
+	}
 
 
 

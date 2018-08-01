@@ -9,14 +9,12 @@
     $user = $_POST['inputUser'];
     $pass = $_POST['inputPass'];
 
-    $admin = new Admin($user,$pass); // se puede hace asi???
+    $admin = new Admin($user,$pass); 
     $admin->setPassword($pass);
 
-    // $pass = md5($pass);
+    $fetchFetch = $admin->quaryAdmin();
 
-    //$quaryAdmin = $admin->quaryAdmin();
-    $fetchFetch = $admin->quaryAdmin();// mysqli_fetch_array($quaryAdmin); 
-
+    // si el login no esta igual al id, mostra msg error
     if ($fetchFetch)
     {
       $_SESSION['id'] = $fetchFetch['id'];
@@ -26,7 +24,7 @@
     else
     {
       $_SESSION["msgError"] = "Ingresaste un usuario o contraseña erróneos.";
-      header("location: login.php"); // no va a login
+      header("location: login.php"); 
     }
     
     ?>
