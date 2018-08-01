@@ -29,14 +29,9 @@ class Posting extends Connectdb {
           $conn = $this->connect();
           $sql = "SELECT * FROM blogtp_1 WHERE id = '$this->id'";
           $results = $conn->query($sql); 
-          /*while ($row = $results->fetch_assoc()){
-            echo "<div>";
-            echo "<textarea>".$row['titulo_del_post']."</textarea><br>";
-            echo "<textarea>".$row['contenido_del_post']."</textarea><br>";
-            echo "</div>";
-          }*/ 
           return $results;
         }
+        
      // La función borrar los datos por id en la base de datos de blogtp_1.sql
     public function borrarPosts(){
      $conn = $this->connect();

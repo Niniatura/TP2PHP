@@ -10,20 +10,8 @@ include_once 'Admin.class.php';
  $conexion = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 session_start();
 
-
-//$titulo =@$_POST['titulo_del_post'];
-//$contenido=@$_POST['contenido_del_post'];
 $id=@$_GET['id'];
-    //$setPosting = new Posting($titulo,$contenido,$id);
-    //
-//$setPosting->showPosts();
-    //fetching data in descending order (lastest entry first)
-    
-
-
-//function updatePost(){    
-//if (isset($_POST['update'])) {
-//	global $conexion;
+    // funcion para busca el post por id es mostrar_post
     $id = @$_GET['id'];
     $sql = "SELECT * FROM blogtp_1 where id=$id";
     $result2 = mysqli_query($conexion, $sql);

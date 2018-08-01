@@ -14,9 +14,8 @@ if (isset($_POST['delete'])) {
 $titulo =@$_POST['titulo_del_post'];
 $contenido=@$_POST['contenido_del_post'];
 $id=@$_GET['id'];
-/*$borrarPosts= new Posting($id,$titulo,$contenido);
 
-$result = $borrarPosts->borrarPosts($id, $titulo, $contenido);*/
+// funcion de borrar el post por id
 $getPosting2=new Posting($titulo,$contenido,$id);
 $getPosting2->borrarPosts();
 
